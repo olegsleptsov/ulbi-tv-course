@@ -9,6 +9,13 @@ export interface BuildPaths {
   html: string,
   entry: string,
   build: string,
+  src: string,
+  app: string,
+  pages: string,
+  widgets: string,
+  features: string,
+  entities: string,
+  shared: string,
 }
 
 export interface BuildOptions {

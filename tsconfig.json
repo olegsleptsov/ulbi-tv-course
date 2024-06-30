@@ -6,6 +6,18 @@
     "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
+    "baseUrl": ".",
+    // "paths": {
+    //   "*": ["./src/*"]
+    // },
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@features/*": ["src/features/*"],
+      "@entities/*": ["src/entities/*"],
+      "@shared/*": ["src/shared/*"],
+    },
     "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,

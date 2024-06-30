@@ -22,7 +22,7 @@ export const createWebpackConfig = (
     module: {
       rules: createLoaders(options),
     },
-    resolve: createResolvers(),
+    resolve: createResolvers(options),
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: createDevServer(options),
   };
