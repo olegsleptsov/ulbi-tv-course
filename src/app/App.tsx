@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import classnames from "classnames";
 
 import { useTheme } from "@app/providers/ThemeProvider";
-import { AboutPage } from "@pages/About";
-import { MainPage } from "@pages/Main";
+import { AppRouter } from "@app/routes";
 
 import "@app/styles/index.scss";
 
@@ -26,13 +25,7 @@ export const App = () => {
       <Link to="/counter" title="counter">
         Counter
       </Link>
-
-      <Suspense fallback={<div>Loading ...</div>}>
-        <Routes>
-          <Route path="/" Component={MainPage} />
-          <Route path="/about" Component={AboutPage} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };

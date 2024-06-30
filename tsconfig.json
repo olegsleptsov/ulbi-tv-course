@@ -7,9 +7,6 @@
     "target": "es5",
     "jsx": "react-jsx",
     "baseUrl": ".",
-    // "paths": {
-    //   "*": ["./src/*"]
-    // },
     "paths": {
       "@app/*": ["src/app/*"],
       "@pages/*": ["src/pages/*"],
