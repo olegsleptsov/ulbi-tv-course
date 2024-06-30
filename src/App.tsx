@@ -5,6 +5,7 @@ import { Suspense, lazy, useContext, useState } from "react";
 import MainPage from "./pages/Main/MainPage";
 import { useTheme } from "./theme/hooks/useTheme";
 import { Theme } from "./theme/ThemeContext";
+import classnames from "classnames";
 
 const LazyAboutPage = lazy(() => import("./pages/About/AboutPage"));
 const LazyCounter = lazy(() => import("./components/Counter"));
@@ -14,9 +15,10 @@ export const App = () => {
 
   return (
     <div
-      className={`app ${
-        theme === Theme.LIGHT ? "app_light_theme" : "app_dark_theme"
-      }`}
+      className={classnames("app", {
+        app_light_theme: theme === Theme.LIGHT,
+        app_dark_theme: theme === Theme.DARK,
+      })}
     >
       <button onClick={toggleTheme}>Change theme</button>
       <Link to="/" title="Main">
