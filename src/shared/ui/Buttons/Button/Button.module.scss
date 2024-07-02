@@ -1,0 +1,13 @@
+.root {
+  outline: 0;
+  background: var(--button-primary-color);
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: var(--button-primary-color-hover);
+    cursor: pointer;
+  }
+}
+

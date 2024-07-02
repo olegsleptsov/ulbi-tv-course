@@ -1,0 +1,138 @@
+.base {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+}
+
+/* sizes */
+
+.size_1 {
+  height: 18px;
+  min-height: 18px;
+  width: 18px;
+  min-width: 18px;
+  border-radius: 6px;
+}
+
+.size_2 {
+  height: 20px;
+  min-height: 20px;
+  width: 20px;
+  min-width: 20px;
+  border-radius: 8px;
+}
+
+.size_3 {
+  height: 24px;
+  min-height: 24px;
+  width: 24px;
+  min-width: 24px;
+  border-radius: 8px;
+}
+
+.size_4 {
+  height: 32px;
+  min-height: 32px;
+  width: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+}
+
+.size_5 {
+  height: 40px;
+  min-height: 40px;
+  width: 40px;
+  min-width: 40px;
+  border-radius: 8px;
+}
+
+/* variants */
+
+.chip {
+  background-color: var(--background-main-globe);
+  color: var(--icon-carret);
+
+  &:hover {
+    background-color: var(--button-secondary-neutral-light-focus);
+  }
+}
+
+.delete {
+  border: 1px solid var(--border-button-danger-default);
+  color: var(--icon-danger);
+  background-color: var(--background-main-globe);
+
+  &:hover {
+    border-color: var(--border-button-danger-hover);
+  }
+}
+
+.primary {
+  border: 1px solid var(--border-button-primary-default);
+  color: var(--icon-accent);
+  background-color: var(--background-main-globe);
+
+  &:hover {
+    border-color: var(--border-button-primary-hover);
+  }
+}
+
+.island {
+  border: 1px solid var(--border-other-island);
+  color: var(--icon-carret);
+  background-color: var(--background-main-globe);
+
+  &:hover {
+    border-color: var(--border-other-divider);
+  }
+}
+
+.chip_inverted {
+  background-color: var(--background-chip-neutral-light-default);
+  color: var(--text-main-helptext);
+
+  &:hover {
+    background-color: var(--background-chip-neutral-light-hover);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.transparent_primary {
+  background-color: transparent;
+  color: var(--icon-inactive);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--icon-carret);
+  }
+}
+
+/* radius */
+
+.radius_full {
+  border-radius: 100%;
+}
+
+/* animations */
+
+.icon_children_enter {
+  opacity: 0.3;
+}
+
+.icon_children_active {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
