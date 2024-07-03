@@ -1,0 +1,23 @@
+.root {
+  height: calc(100vh - var(--header-height));
+  background-color: var(--bg-invert-primary-color);
+  width: var(--sidebar-collapsed-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  transition: width var(--animation-duration-m);
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.buttons {
+
+}
+
+.isExpanded {
+  width: var(--sidebar-uncollapsed-width);
+}

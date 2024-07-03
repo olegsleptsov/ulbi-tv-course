@@ -2,6 +2,7 @@
 @import "./variables/fonts.scss";
 @import "./variables/themes/dark.scss";
 @import "./variables/themes/light.scss";
+@import "./variables/constants";
 
 body,
 html {
@@ -9,8 +10,17 @@ html {
 }
 
 .app {
-  //font-size: 30px;
   height: 100vh;
   background-color: var(--bg-primary-color);
   color: var(--text-primary-color)
+}
+
+.content-with-sidebar-wrapper {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+}
+
+.app-content {
+  background-color: red;
+  flex-grow: 1;
 }
