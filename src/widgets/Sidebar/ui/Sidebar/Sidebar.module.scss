@@ -1,11 +1,11 @@
 .root {
-  height: calc(100vh - var(--header-height));
-  background-color: var(--bg-invert-primary-color);
-  width: var(--sidebar-collapsed-width);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: var(--sidebar-collapsed-width);
+  height: calc(100vh - var(--header-height));
   padding-bottom: 40px;
+  background-color: var(--bg-invert-primary-color);
   transition: width var(--animation-duration-s);
 }
 
@@ -16,13 +16,13 @@
 
 .buttons {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
-.isExpanded {
+.is_expanded {
   width: var(--sidebar-uncollapsed-width);
 }

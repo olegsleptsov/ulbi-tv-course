@@ -1,8 +1,8 @@
 .root {
-  outline: 0;
-  background: var(--button-primary-color);
   padding: 10px;
   border-radius: 10px;
+  outline: 0;
+  background: var(--button-primary-color);
   transition: background-color 300ms;
 
   &:hover {

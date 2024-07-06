@@ -1,7 +1,7 @@
-@import "./reset.scss";
-@import "./variables/fonts.scss";
-@import "./variables/themes/dark.scss";
-@import "./variables/themes/light.scss";
+@import "./reset";
+@import "./variables/fonts";
+@import "./variables/themes/dark";
+@import "./variables/themes/light";
 @import "./variables/constants";
 
 body,
@@ -11,13 +11,13 @@ html {
 
 .app {
   height: 100vh;
-  background-color: var(--bg-primary-color);
-  color: var(--text-primary-color)
+  color: var(--text-primary-color);
+  background-color: var(--bg-primary-color)
 }
 
 .content-with-sidebar-wrapper {
-  height: calc(100vh - var(--header-height));
   display: flex;
+  height: calc(100vh - var(--header-height));
 }
 
 .app-content {
