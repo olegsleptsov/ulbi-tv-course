@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react-refresh', '@conarti/feature-sliced', 'import'],
+  plugins: ['react-refresh', '@conarti/feature-sliced', 'import', 'i18next'],
   rules: {
     // errors
     'import/no-cycle': 'error',
@@ -35,6 +35,7 @@ module.exports = {
     '@conarti/feature-sliced/public-api': 'error',
     '@typescript-eslint/no-use-before-define': 'error',
     'quotes': ['error', 'single'],
+    "i18next/no-literal-string": 'error',
 
     // warnings
     'react/jsx-props-no-spreading': 1,
