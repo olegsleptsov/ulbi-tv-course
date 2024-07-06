@@ -1,0 +1,38 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: grid;
+  width: 75px;
+  aspect-ratio: 1;
+}
+
+.loader::before,
+.loader::after {
+  grid-area: 1/1;
+  width: 35px;
+  box-shadow: 0 0 0 3px var(--bg-invert-primary-color) inset;
+  animation: l8 2s infinite alternate;
+  content: "";
+  aspect-ratio: 1;
+  filter: drop-shadow(40px 40px 0 var(--bg-invert-primary-color));
+}
+
+.loader::after {
+  margin: 0 0 0 auto;
+  filter: drop-shadow(-40px 40px 0 var(--bg-invert-primary-color));
+  animation-delay: -1s;
+}
+
+.full_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@keyframes l8 {
+  0%,10%   {border-radius:0}
+  30%,40%  {border-radius:50% 0}
+  60%,70%  {border-radius:50%}
+  90%,100% {border-radius:0 50%}
+}
+
