@@ -2,7 +2,7 @@ import classNames from "classnames";
 import style from "./Sidebar.module.scss";
 import {ChangeThemeButton} from "@features/changeTheme";
 import {ChangeSidebarWidth, useIsExpaned} from "@features/changeSidebarWidth";
-import {useEffect, useState} from "react";
+import {ChangeLanguageButton} from "@features/changeLanguage";
 
 interface SidebarProps {
   className?: string;
@@ -18,7 +18,7 @@ export const Sidebar = ({className}: SidebarProps) => {
         </div>
         <div className={style.buttons}>
           <ChangeThemeButton/>
-          {/*<ChangeLanguageButton />*/}
+          <ChangeLanguageButton />
         </div>
       </div>
     );

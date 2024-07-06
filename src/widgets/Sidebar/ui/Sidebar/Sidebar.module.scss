@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
-  transition: width var(--animation-duration-m);
+  transition: width var(--animation-duration-s);
 }
 
 .content {
@@ -15,7 +15,12 @@
 }
 
 .buttons {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .isExpanded {

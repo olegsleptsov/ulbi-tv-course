@@ -1,9 +1,10 @@
 :root {
   --header-height: 50px;
 
-  --sidebar-collapsed-width: 80px;
+  --sidebar-collapsed-width: 100px;
   --sidebar-uncollapsed-width: 300px;
 
   // Animations
+  --animation-duration-s: 300ms;
   --animation-duration-m: 500ms;
 }
