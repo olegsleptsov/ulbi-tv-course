@@ -6,7 +6,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export function Button({ className, children, ...otherProps }: ButtonProps) {
+export const Button = ({ className, children, ...otherProps }: ButtonProps) => {
   return (
     <button className={classNames(style.root, className)} {...otherProps}>
       {children}

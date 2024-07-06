@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Button } from '@shared/ui/Buttons/Button/Button';
+import { Button } from '@shared/ui/Buttons/Button';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
