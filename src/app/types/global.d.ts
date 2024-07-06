@@ -2,8 +2,8 @@ declare module '*.scss' {
   interface IClassNames {
     [className: string]: string;
   }
-  const classnames: IClassNames;
-  export = classnames;
+  const style: IClassNames;
+  export = style;
 }
 
 declare module '*.svg' {

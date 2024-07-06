@@ -12,7 +12,7 @@ export function Sidebar({ className }: SidebarProps) {
   const { isExpanded, toggle } = useIsExpaned();
 
   return (
-    <div className={classNames(style.root, { [style.is_expanded]: isExpanded }, className)}>
+    <div className={classNames(style.root, { [style.expanded]: isExpanded }, className)}>
       <div className={style.content}>
         <ChangeSidebarWidth toggle={toggle} isExpanded={isExpanded} />
       </div>
