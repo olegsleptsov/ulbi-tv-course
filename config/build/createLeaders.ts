@@ -1,44 +1,43 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/webpackConfig";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types/webpackConfig';
 
 export const createLoaders = (options: BuildOptions) => {
-  const {isDev} = options;
+  const { isDev } = options;
 
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
-  }
+  };
 
   const tsLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+    use: 'ts-loader',
     exclude: /node_modules/,
   };
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
-      isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
             auto: /\.module./,
-            localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:5]",
+            localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:5]',
             namedExport: false,
           },
         },
       },
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
   const fileLoader = {
     test: /\.png/,
-    type: 'asset/resource'
-  }
-
+    type: 'asset/resource',
+  };
 
   return [svgLoader, fileLoader, tsLoader, cssLoader];
 };

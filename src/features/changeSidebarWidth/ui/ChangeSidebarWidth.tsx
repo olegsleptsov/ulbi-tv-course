@@ -1,5 +1,6 @@
-import {Button} from "@shared/ui/Buttons/Button/Button";
-import {useTranslation} from "react-i18next";
+import { Button } from '@shared/ui/Buttons/Button/Button';
+import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 
 interface ChangeSidebarWidthProps {
   className?: string
@@ -7,10 +8,10 @@ interface ChangeSidebarWidthProps {
   isExpanded: boolean
 }
 
-export const ChangeSidebarWidth = ({className, toggle, isExpanded}: ChangeSidebarWidthProps) => {
-  const {t} = useTranslation()
+export function ChangeSidebarWidth({ className, toggle, isExpanded }: ChangeSidebarWidthProps) {
+  const { t } = useTranslation();
 
   return (
-    <Button onClick={() => toggle()}>{isExpanded ? t('Свернуть') : t('Развернуть')}</Button>
+    <Button className={classNames(className)} onClick={() => toggle()}>{isExpanded ? t('Свернуть') : t('Развернуть')}</Button>
   );
-};
+}

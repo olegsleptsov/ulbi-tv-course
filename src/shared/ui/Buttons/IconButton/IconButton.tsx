@@ -1,7 +1,9 @@
-import classNames from 'classnames'
-import {ComponentPropsWithoutRef, forwardRef, ReactElement, ReactNode, useState} from 'react'
+import classNames from 'classnames';
+import {
+  ComponentPropsWithoutRef, forwardRef, ReactNode,
+} from 'react';
 
-import styles from './IconButton.module.scss'
+import styles from './IconButton.module.scss';
 
 type Variants =
   | 'primary'
@@ -20,7 +22,7 @@ const sizes: Record<Sizes, string> = {
   3: styles.size_3,
   4: styles.size_4,
   5: styles.size_5,
-}
+};
 
 const variants: Record<Variants, string> = {
   primary: styles.primary,
@@ -30,7 +32,7 @@ const variants: Record<Variants, string> = {
   chip_inverted: styles.chip_inverted,
   transparent: styles.transparent,
   transparent_primary: styles.transparent_primary,
-}
+};
 
 export type Props = Omit<ComponentPropsWithoutRef<'button'>, 'children'> & {
   variant?: Variants
@@ -52,28 +54,25 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(
       className,
       ...props
     },
-    ref
-  ) => {
-
-    return (
-      <button
-        className={classNames(
-          styles.base,
-          [
-            variants[variant],
-            sizes[size],
-            {
-              [styles.radius_full]: isRounded,
-            },
-          ],
-          className
-        )}
-        {...props}
-        type={type}
-        ref={ref}
-      >
-        {children}
-      </button>
-    )
-  }
-)
+    ref,
+  ) => (
+    <button
+      className={classNames(
+        styles.base,
+        [
+          variants[variant],
+          sizes[size],
+          {
+            [styles.radius_full]: isRounded,
+          },
+        ],
+        className,
+      )}
+      {...props}
+      type={type}
+      ref={ref}
+    >
+      {children}
+    </button>
+  ),
+);

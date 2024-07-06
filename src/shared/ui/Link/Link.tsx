@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import style from "./Link.module.scss";
-import {Link as RouterLink, LinkProps as RouterLinkProps} from "react-router-dom";
-import {ReactNode} from "react";
+import classNames from 'classnames';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+import { ReactNode } from 'react';
+import style from './Link.module.scss';
 
 type Variant = 'primary' | 'secondary'
 
@@ -13,9 +13,9 @@ interface LinkProps extends RouterLinkProps {
 const variants: Record<Variant, string> = {
   primary: style.primary,
   secondary: style.secondary,
-}
+};
 
-export const Link = (props: LinkProps) => {
+export function Link(props: LinkProps) {
   const {
     className,
     children,
@@ -33,4 +33,4 @@ export const Link = (props: LinkProps) => {
       {children}
     </RouterLink>
   );
-};
+}

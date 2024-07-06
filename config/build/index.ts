@@ -1,2 +1,2 @@
-export { BuildEnv, BuildPaths } from "./types/webpackConfig";
-export { createWebpackConfig } from "./createWebpackConfig";
+export { BuildEnv, BuildPaths } from './types/webpackConfig';
+export { createWebpackConfig } from './createWebpackConfig';

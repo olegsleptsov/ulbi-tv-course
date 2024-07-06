@@ -1,12 +1,11 @@
-import {ChangeThemeButton} from '@features/changeTheme'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-const MainPage = () => {
-  const {t, i18n} = useTranslation()
+function MainPage() {
+  const { t } = useTranslation();
 
-  return <>
+  return (
     <h1>{t('Главная страница')}</h1>
-  </>;
-};
+  );
+}
 
 export default MainPage;

@@ -1,23 +1,23 @@
-import classNames from "classnames";
-import {Button} from "@shared/ui/Buttons/Button/Button";
-import {useTranslation} from "react-i18next";
-import {useState} from "react";
+import classNames from 'classnames';
+import { Button } from '@shared/ui/Buttons/Button/Button';
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 interface ChangeLanguageButtonProps {
   className?: string;
 }
 
-export const ChangeLanguageButton = ({ className }: ChangeLanguageButtonProps) => {
-  const {t, i18n} = useTranslation()
-  const [language, setLanguage] = useState(i18n.language)
+export function ChangeLanguageButton({ className }: ChangeLanguageButtonProps) {
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
   const toggleLanguage = () => {
-    const newLanguage = language === 'ru' ? 'en' : 'ru'
-    setLanguage(newLanguage)
-    i18n.changeLanguage(newLanguage)
-  }
+    const newLanguage = language === 'ru' ? 'en' : 'ru';
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  };
 
   return (
     <Button onClick={toggleLanguage} className={classNames(className)}>{t('Сменить язык')}</Button>
   );
-};
+}
