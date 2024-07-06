@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import { createDevServer } from './createDevServer';
-import { createLoaders } from './createLeaders';
+import { createLoaders } from './createLoaders';
 import { createPlugins } from './createPlugins';
 import { createResolvers } from './createResolvers';
 import { BuildOptions } from './types/webpackConfig';
