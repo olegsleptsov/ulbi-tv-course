@@ -6,7 +6,6 @@ export const createDevServer = (
 ): DevServerConfiguration => (options.isDev
   ? {
     port: options.port,
-    open: true,
     historyApiFallback: true,
     hot: true,
   }
