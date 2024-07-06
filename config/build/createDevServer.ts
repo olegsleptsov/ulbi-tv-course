@@ -9,6 +9,7 @@ export const createDevServer = (
         port: options.port,
         open: true,
         historyApiFallback: true,
+        hot: true,
       }
     : {};
 };

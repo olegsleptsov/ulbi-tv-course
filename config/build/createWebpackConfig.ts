@@ -25,5 +25,6 @@ export const createWebpackConfig = (
     resolve: createResolvers(options),
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: createDevServer(options),
+    target: 'web',
   };
 };

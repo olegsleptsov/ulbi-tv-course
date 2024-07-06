@@ -16,5 +16,6 @@ export const createPlugins = ({ paths, isDev }: BuildOptions) => {
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
     new webpack.ProgressPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ];
 };
