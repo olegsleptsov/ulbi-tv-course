@@ -16,6 +16,17 @@ export const createLoaders = (options: BuildOptions) => {
     exclude: /node_modules/,
   };
 
+  const babelLoader = {
+    test: /\.(js|ts|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -39,5 +50,5 @@ export const createLoaders = (options: BuildOptions) => {
     type: 'asset/resource',
   };
 
-  return [svgLoader, fileLoader, tsLoader, cssLoader];
+  return [svgLoader, fileLoader, babelLoader, tsLoader, cssLoader];
 };
