@@ -6,12 +6,19 @@ interface ChangeSidebarWidthProps {
   className?: string
   toggle: () => void
   isExpanded: boolean
+  buttonTestId?: string
 }
 
-export function ChangeSidebarWidth({ className, toggle, isExpanded }: ChangeSidebarWidthProps) {
+export function ChangeSidebarWidth({ className, toggle, isExpanded, buttonTestId }: ChangeSidebarWidthProps) {
   const { t } = useTranslation();
 
   return (
-    <Button className={classNames(className)} onClick={() => toggle()}>{isExpanded ? t('Свернуть') : t('Развернуть')}</Button>
+    <Button
+      data-testid={buttonTestId}
+      className={classNames(className)}
+      onClick={toggle}
+    >
+      {isExpanded ? t('Свернуть') : t('Развернуть')}
+    </Button>
   );
 }
