@@ -1,3 +1,4 @@
+// eslint-disable-next-line @conarti/feature-sliced/layers-slices
 import {ErrorBoundary} from '@app/providers/ErrorBoundary';
 import {StoryFn} from '@storybook/react';
 
