@@ -4,7 +4,9 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "ESNext",
+    "moduleResolution": "node",
     "target": "es2017",
+    "skipLibCheck": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
@@ -16,21 +18,15 @@
       "@shared/*": ["src/shared/*"]
     },
     "allowJs": true,
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["@testing-library/jest-dom", "node", "jest", "storybook"]
+    "types": ["@testing-library/jest-dom", "node"]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": [
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./config/**/*.ts",
-    "./config/**/*.tsx",
-    "node_modules/@types/node/globals.d.ts"
-  ]
+  "include": ["src", "src/app/types/global.d.ts", "@types"],
+  "exclude": ["node_modules"]
 }

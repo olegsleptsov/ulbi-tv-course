@@ -1,5 +1,10 @@
 import type {Preview} from '@storybook/react';
-import {StyleDecorator, ThemeDecorator} from '@shared/config/storybook/decorators';
+import {
+  ErrorBoundaryDecorator,
+  RouterDecorator,
+  StyleDecorator,
+  ThemeDecorator
+} from '@shared/config/storybook/decorators';
 import {Theme} from '@shared/themes';
 
 const preview: Preview = {
@@ -13,7 +18,9 @@ const preview: Preview = {
   },
   decorators: [
     StyleDecorator,
-    ThemeDecorator(Theme.LIGHT)
+    ThemeDecorator(Theme.LIGHT),
+    RouterDecorator,
+    ErrorBoundaryDecorator,
   ],
 };
 

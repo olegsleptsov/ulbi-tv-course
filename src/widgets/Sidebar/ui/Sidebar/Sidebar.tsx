@@ -1,14 +1,14 @@
 import classNames from 'classnames';
-import { ChangeThemeButton } from '@features/changeTheme';
 import { ChangeSidebarWidth, useIsExpaned } from '@features/changeSidebarWidth';
-import { ChangeLanguageButton } from '@features/changeLanguage';
 import style from './Sidebar.module.scss';
+import {ReactNode} from 'react';
 
 interface SidebarProps {
   className?: string;
+  children?: ReactNode
 }
 
-export function Sidebar({ className }: SidebarProps) {
+export function Sidebar({ className, children }: SidebarProps) {
   const { isExpanded, toggle } = useIsExpaned();
 
   return (
@@ -24,8 +24,7 @@ export function Sidebar({ className }: SidebarProps) {
         />
       </div>
       <div className={style.buttons}>
-        <ChangeThemeButton />
-        <ChangeLanguageButton />
+        {children}
       </div>
     </div>
   );
