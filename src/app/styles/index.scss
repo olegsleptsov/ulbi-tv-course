@@ -1,0 +1,25 @@
+@import "./reset";
+@import "./variables/fonts";
+@import "./variables/themes/dark";
+@import "./variables/themes/light";
+@import "./variables/constants";
+
+body,
+html {
+  font: var(--font-m);
+}
+
+.app {
+  height: 100vh;
+  color: var(--text-primary-color);
+  background-color: var(--bg-primary-color)
+}
+
+.content-with-sidebar-wrapper {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+}
+
+.app-content {
+  flex-grow: 1;
+}

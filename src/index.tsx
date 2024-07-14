@@ -1,6 +1,13 @@
-import { createRoot } from "react-dom/client";
-import { App } from "./App";
+import { createRoot } from 'react-dom/client';
+import { App } from './app/App';
+import {RootProvider} from './app/providers/RootProvider';
 
-const container = document.getElementById("root");
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<App />);
+import './app/i18n/i18n';
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+  <RootProvider>
+    <App />
+  </RootProvider>
+);
