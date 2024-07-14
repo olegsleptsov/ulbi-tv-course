@@ -5,11 +5,12 @@ module.exports = {
     jest: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:import/typescript',
+      'eslint:recommended',
+      'plugin:react/recommended',
+      'plugin:@typescript-eslint/recommended',
+      'plugin:react-hooks/recommended',
+      'plugin:import/typescript',
+      'plugin:storybook/recommended'
   ],
   ignorePatterns: ['build', '.eslintrc.js'],
   parser: '@typescript-eslint/parser',

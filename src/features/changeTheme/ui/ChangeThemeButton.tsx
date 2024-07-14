@@ -1,5 +1,5 @@
 import { IconButton } from '@shared/ui/Buttons/IconButton';
-import { Theme } from '@shared/themes/ui/ThemeContext';
+import { Theme } from '@shared/themes';
 import { DarkThemeIcon, LightThemeIcon } from '@shared/assets/icons';
 import { useTheme } from '../lib/useTheme';
 

@@ -24,7 +24,7 @@ export const createWebpackConfig = (
     module: {
       rules: createLoaders(options),
     },
-    resolve: createResolvers(options),
+    resolve: createResolvers(options.paths),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: createDevServer(options),
     target: 'web',
